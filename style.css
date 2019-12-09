@@ -67,6 +67,11 @@ button {
   font-size: 15px;
   border-radius: 10px;
   padding: 5px 10px;
+  transition: background-color 0.3s;
+}
+
+#play:hover {
+  background-color: firebrick;
 }
 
 #stop {
@@ -75,6 +80,11 @@ button {
   font-size: 15px;
   border-radius: 10px;
   padding: 5px 10px;
+  transition: background-color 0.3s;
+}
+
+#stop:hover{
+  background-color: seagreen;
 }
 
 .interim {
