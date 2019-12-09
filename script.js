@@ -130,7 +130,8 @@ function showInfo(s) {
 var songs = ["all i want for christmas is you", "last christmas", "mistletoe", "santa tell me", 
             "jingle bell rock", "underneath the tree", "winter wonderland", "santa claus is coming to town", 
             "into the unknown", "let it go"];
-var audioElement;
+var audioElement = new Audio();
+var filename;
 
 function getSong(string){
   string = string.toLowerCase()
@@ -143,11 +144,13 @@ function getSong(string){
 
   console.log(song);
   
-  var filename = "songs/" + song + '.mp3';
-  audioElement = new Audio(filename);
+  filename = "songs/" + song + '.mp3';
 }
 
 function playSong() {
+  audioElement.pause();
+  audioElement.src = filename;
+  audioElement.load();
   audioElement.play();
 }
 
